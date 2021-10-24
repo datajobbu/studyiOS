@@ -28,5 +28,13 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func newBtn(_ sender: Any) {
+        let alert = UIAlertController(title: "New", message: "Button", preferredStyle: .alert)
+        let action = UIAlertAction(title: "YES", style: .default, handler: nil)
+        let action2 = UIAlertAction(title: "NO", style: .default, handler: nil)
+        alert.addAction(action)
+        alert.addAction(action2)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
