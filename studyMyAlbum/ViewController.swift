@@ -11,11 +11,21 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func hello(_ sender: Any) {
-        print("Hello")
+        // alert 창 구성 - contents
+        let alert = UIAlertController(title: "Hello", message: "My First App!", preferredStyle:.alert)
+        
+        // alert 창 구성 - button
+        // handler가 `nil`이면 아무것도 안하고 창 닫음
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        // alert contents에 action 추가
+        alert.addAction(action)
+       
+        // alert을 띄우는 함수
+        present(alert, animated: true, completion: nil)
     }
     
 }
