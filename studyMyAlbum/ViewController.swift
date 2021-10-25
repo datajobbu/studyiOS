@@ -8,33 +8,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    // 타입 추론 - option 누르고 변수 클릭
+    // var currentValue: int = 0
+    var currentValue = 0
+    
+    @IBOutlet weak var priceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    @IBAction func hello(_ sender: Any) {
-        // alert 창 구성 - contents
-        let alert = UIAlertController(title: "Hello", message: "My First App!", preferredStyle:.alert)
-        
-        // alert 창 구성 - button
-        // handler가 `nil`이면 아무것도 안하고 창 닫음
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        
-        // alert contents에 action 추가
-        alert.addAction(action)
-       
-        // alert을 띄우는 함수
-        present(alert, animated: true, completion: nil)
+        refresh()
     }
     
-    @IBAction func newBtn(_ sender: Any) {
-        let alert = UIAlertController(title: "New", message: "Button", preferredStyle: .alert)
-        let action = UIAlertAction(title: "YES", style: .default, handler: nil)
-        let action2 = UIAlertAction(title: "NO", style: .default, handler: nil)
+    @IBAction func refreshPrice(_ sender: Any) {
+        let message = "가격은 $\(currentValue) 입니다"
+        let alert = UIAlertController(title: "New", message: message, preferredStyle: .alert)
+        // handler -> closure
+        let action = UIAlertAction(title: "YES", style: .default, handler: { action in self.refresh() })
         alert.addAction(action)
-        alert.addAction(action2)
         present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func refresh() {
+        let randomPrice = arc4random_uniform(10000) + 1
+        currentValue = Int(randomPrice)
+        priceLabel.text = "$ \(currentValue)"
     }
 }
 
