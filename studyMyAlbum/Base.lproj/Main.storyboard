@@ -16,32 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRC-Py-EQc">
-                                <rect key="frame" x="117" y="763" width="181" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRC-Py-EQc">
+                                <rect key="frame" x="157" y="762" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GZL-Tg-rhA"/>
+                                    <constraint firstAttribute="width" constant="100" id="s7Z-mb-Uhw"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Refresh!">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="19"/>
                                     <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="refreshPrice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bSj-o3-mqN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MyPics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLH-Zf-Vbw">
-                                <rect key="frame" x="159" y="110" width="139" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="GNT-UT-w2f">
+                                <rect key="frame" x="47" y="288" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="HqR-6k-Eoz"/>
+                                    <constraint firstAttribute="width" constant="320" id="fpL-VC-cmD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dS-oT-d4K">
+                                <rect key="frame" x="161.5" y="619.5" width="91" height="106.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GNT-UT-w2f">
-                                <rect key="frame" x="87" y="217" width="240" height="290"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dS-oT-d4K">
-                                <rect key="frame" x="159" y="636" width="139" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyPics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLH-Zf-Vbw">
+                                <rect key="frame" x="135" y="125" width="145" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Srg-Ye-i9H"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -49,6 +56,18 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0dS-oT-d4K" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GN6-Oh-6cU"/>
+                            <constraint firstItem="0dS-oT-d4K" firstAttribute="firstBaseline" secondItem="GNT-UT-w2f" secondAttribute="baseline" constant="41" symbolType="layoutAnchor" id="UMg-Hl-B2P"/>
+                            <constraint firstItem="eLH-Zf-Vbw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="cVT-2N-7Vr"/>
+                            <constraint firstItem="GNT-UT-w2f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pnm-Va-w9Z"/>
+                            <constraint firstItem="GNT-UT-w2f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="244" id="q9b-mC-IHn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PRC-Py-EQc" secondAttribute="bottom" constant="50" id="rEy-XR-7Ws"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eLH-Zf-Vbw" secondAttribute="trailing" constant="134" id="spa-By-Hy9"/>
+                            <constraint firstItem="eLH-Zf-Vbw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="81" id="uPG-TD-GAY"/>
+                            <constraint firstItem="PRC-Py-EQc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vbe-yJ-VSF"/>
+                            <constraint firstItem="PRC-Py-EQc" firstAttribute="top" secondItem="0dS-oT-d4K" secondAttribute="bottom" constant="36" id="zfM-WI-QWC"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="priceLabel" destination="0dS-oT-d4K" id="o4U-Fv-zVj"/>
@@ -60,6 +79,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dog" width="1372" height="2024.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

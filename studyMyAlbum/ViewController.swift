@@ -26,7 +26,6 @@ class ViewController: UIViewController {
         let action = UIAlertAction(title: "YES", style: .default, handler: { action in self.refresh() })
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
-        
     }
     
     func refresh() {
