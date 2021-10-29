@@ -121,3 +121,19 @@ let lecture3 = Lecture(name: "history", teacherName: "ld.lee", studentCnt: 12)
 let lectures = [lecture1, lecture2, lecture3]
 
 printTeacherName(lectures: lectures, teacher: "ld.lee")
+
+// Protocol
+// CustomStringConvertible -- 설명? 해야 할 일 목록
+struct Market: CustomStringConvertible {
+    var description: String {
+        return "productName: \(name), price: \(price)"
+    }
+    
+    let name: String
+    let price: Int
+}
+
+print(lecture1)
+
+let product1 = Market(name: "milk", price: 2900)
+print(product1)
